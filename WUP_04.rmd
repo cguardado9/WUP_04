@@ -19,12 +19,15 @@ WordData=read_csv("GSScsv.csv")
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
 The data is in the file GSScsv.csv and came from the 2018 General Social Survey.  The question to answer is to resolve this hypothesis.  
+
 $H_0$ There is no difference between the average score on the WORDSUM test and level of schooling DEGREE  
 $H_a$ There is a significant difference in average score on the WORDSUM test between at least two levels of DEGREE  
 
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+
+DEGREE is a numerical Variable. WORDSUM is a categorical variable.So the helper file we need is the numerical~Cat
 
 # Results
 
@@ -45,6 +48,7 @@ basicCN <- ggplot(WordData,aes(x=DEGREE,y=WORDSUM))
 
 basicCN + geom_boxplot()
 ```
+
 The box plot shows that  the longer you are in school the better you are at wordsum .Bachelor and Graduate are higher than being in High school and junior college.It also shows that the medium for graduate scored highest at approximately 11.5
 
 ### Numerical Descriptive Results
@@ -56,6 +60,8 @@ favstats(WORDSUM~DEGREE,data=WordData)
 ```
 
 According to the columns the median of the graduates is highest at 11 WORDSUM and the mean highest is 10.1 WORDSUM unlike none graduates the highest  is 9 for WORDSUM median and for the mean the highest is 9.9 .There is only a light difference between WORDSUM between education levels
+
+
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
