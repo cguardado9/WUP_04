@@ -66,7 +66,7 @@ model1 <- aov(WORDSUM~DEGREE,data=WordData)
 summary.aov(model1)
 ```
 
-This P value is so small 0.00236 .I reject the null hypothesis due to the number being small meaning that there is a small probability of getting the results that we found(0.000236) ,assuming the null hypothesis is true .
+This P value is so small 0.00236 .I reject the null hypothesis due to the number being small meaning that there is a small probability of getting the results that we found(0.000236) ,assuming the null hypothesis is true .  
 
 ```{r}
 #we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
@@ -77,7 +77,7 @@ plot(TukeyHSD(model1),las=2)
 
 # Discussion and Conclusion
 
-<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variables causes the other, or whether they perhaps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variables causes the other, or whether they perhaps are related for some other reason.  Watch the chapter 6 videos from the George Town videos collection.!-->
 
 Overall the p value is so small 0.00236 that it determines that there is a difference in education between between WORDSUM. Graduate have a higher mean in WORDSUM than High scholars
 
